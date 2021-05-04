@@ -1,8 +1,8 @@
 import { withFormik } from 'formik';
 import RegisterForm from '../components/RegisterForm';
 
-const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-const regexPassword = /[a-zA-Z0-9]{8,}/;
+export const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+export const regexPassword = /[a-zA-Z0-9]{8,}/;
 
  export default  withFormik({
  

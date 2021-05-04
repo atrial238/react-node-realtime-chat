@@ -1,15 +1,14 @@
 import LoginForm from '../components/LoginForm';
 import { withFormik } from 'formik';
-
  
  export default withFormik({
    validate: values => {
      const errors = {};
- 
-     if (!values.name) {
-       errors.name = 'Required';
-     }
- 
+
+	  if(!values.name) errors.name = 'Пожалуйста введите свое имя';
+	  
+	  if(!values.password) errors.password = 'Пожалуйста введите пароль';
+
      return errors;
    },
  

@@ -1,4 +1,5 @@
 import {Input as BaseInput, Form } from 'antd';
+import PropTypes from 'prop-types';
 
 const Input = (props) => {
 	const {Icon, handleChange, handleBlur, values, id, touched, errors} = props;
@@ -50,5 +51,16 @@ const Input = (props) => {
 				} 
 			</Form.Item>
 }
+
+Input.propTypes = {
+	id: PropTypes.string,
+	Icon: PropTypes.element,
+	handleChange: PropTypes.func,
+	handleBlur: PropTypes.func,
+	values: PropTypes.object,
+	touched: PropTypes.object,
+	errors: PropTypes.object,
+}
+
 export default Input;
-					
+

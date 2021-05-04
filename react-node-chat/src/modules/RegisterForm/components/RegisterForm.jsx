@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 
 import { ContainerEnteryForm } from "../../../components";
 import {Input} from '../../../components';
+
 const RegisterForm = ({handleSubmit, ...propsInput}) => {
 
 	 return (
@@ -15,7 +16,7 @@ const RegisterForm = ({handleSubmit, ...propsInput}) => {
 					<Input id='name' Icon={UserOutlined} {...propsInput} />
 					<Input id='password' Icon={LockOutlined} {...propsInput} />
 					<Input id='repeat_password' Icon={LockOutlined} {...propsInput} />
-				
+
 					<Form.Item>
 						<Button type="primary" htmlType="submit" onClick={handleSubmit} className="auth__login-form-button">
 							 Зарегистрироваться
