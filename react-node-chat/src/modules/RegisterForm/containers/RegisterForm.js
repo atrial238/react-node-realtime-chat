@@ -9,16 +9,19 @@ const regexPassword = /[a-zA-Z0-9]{8,}/;
    validate: values => {
      const errors = {};
 	 
-     if (!values.email)  errors.email = 'Пожалуйста введите свое email';
+     if(!values.email) errors.email = 'Пожалуйста введите свое email';
 
 	  if(!regexEmail.test(values.email)) errors.email = 'Пожалуйста, введите корректный  email';
 
 	  if(!values.name) errors.name = 'Пожалуйста введите свое имя';
 	  
+	  if(!values.password) errors.password = 'Пожалуйста введите пароль';
+
+	  if(!values.repeat_password) errors.repeat_password = 'Пожалуйста введите пароль';
+
 	  if(!regexPassword.test(values.password)) errors.password = 'Минимум 8 символов';
 
 	  if(!regexPassword.test(values.repeat_password)) errors.repeat_password = 'Минимум 8 символов';
-
 
      return errors;
    },
@@ -31,5 +34,5 @@ const regexPassword = /[a-zA-Z0-9]{8,}/;
      }, 1000);
    },
  
-   displayName: 'BasicForm',
+   displayName: 'RegisterForm',
  })(RegisterForm);
